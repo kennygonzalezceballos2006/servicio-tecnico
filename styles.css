@@ -1,0 +1,151 @@
+html, body {
+    font-family: Arial, sans-serif;
+    background-color: #F6FAFD;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px
+}
+
+nav {
+    background-color: #0A1931;
+    width: 100%;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 10px 0
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    display: inline-block;
+    transform: scale(1.2);
+}
+
+#quien-soy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    min-height: 80vh;
+    padding: 60px 20px;
+    margin-bottom: 5%;
+}
+
+#quien-soy h2 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+#quien-soy p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+main #servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 60px 20px;
+}
+
+#servicios li {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+main #precios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    min-height: 80vh;
+    padding: 60px 20px;
+}
+
+#precios li {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+main #procesos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 100px;
+    min-height: 80vh;
+    padding: 60px 20px;
+}
+
+#procesos ol {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+main #confianza {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    min-height: 80vh;
+    padding: 60px 20px;
+}
+
+#confianza li {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+main #contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    min-height: 80vh;
+    padding: 60px 20px;
+}
+
+#contacto li {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #4A7FA7;
+}
