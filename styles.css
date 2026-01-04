@@ -230,3 +230,105 @@ footer {
 #footer p {
     margin: 6px 0;
 }
+
+@media (max-width: 768px) {
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 12px;
+        column-gap: 10px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Media Queries para tablets y móviles */
+@media (max-width: 1024px) {
+    /* Ajuste de textos y listas */
+    main #servicios li,
+    main #precios li,
+    main #procesos li,
+    main #confianza li {
+        white-space: normal; /* se ajusta al ancho */
+    }
+
+    /* Tamaños de imágenes y ancho de ul */
+    main section img {
+        max-width: 200px;
+        margin-top: 0;
+    }
+
+    main section ul {
+        width: 55%;
+    }
+
+    main section li {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    /* Espacio entre menú y secciones */
+    main {
+        margin-top: 20px; /* o padding-top: 20px; */
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 768px) {
+    main #servicios li,
+    main #precios li,
+    main #procesos li,
+    main #confianza li {
+        white-space: normal;
+    }
+
+    main section img {
+        max-width: 150px;
+    }
+
+    main section ul {
+        width: 60%;
+    }
+
+    main section li {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    main {
+        margin-top: 25px; /* un poco más de espacio en móviles pequeños */
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 480px) {
+    main #servicios li,
+    main #precios li,
+    main #procesos li,
+    main #confianza li {
+        white-space: normal;
+    }
+
+    main section img {
+        max-width: 120px;
+    }
+
+    main section ul {
+        width: 65%;
+    }
+
+    main section li {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    main {
+        margin-top: 30px; /* suficiente espacio para que no choque con nav */
+    }
+}
