@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    scroll-padding-top: 70px
+    scroll-padding-top: 55px;
 }
 
 nav {
@@ -73,30 +73,65 @@ main {
 
 main #servicios {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    min-height: 80vh;
-    padding: 60px 20px;
+    justify-content: flex-end;
+    min-height: 93vh;
+    padding: 0;
+    padding-top: 0;
+    padding-left: 0;
+    gap: 7%;
+}
+
+#servicios ul {
+    width: 51%;
+    margin: 0;
 }
 
 #servicios li {
-    font-size: 1.5rem;
-    line-height: 1.6;
+    font-size: 1.3rem;
+    line-height: 2.8;
     max-width: 600px;
+    white-space: nowrap;
+    list-style: none;
 }
+
+#servicios li::before {
+    content: "✔";
+    font-weight: bold;
+}
+
+#servicios img {
+    margin-top: 20%;
+}
+
 main #precios {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    min-height: 80vh;
-    padding: 60px 20px;
+    gap: 4%;
+    min-height: 90vh;
+    padding: 0;
+    padding-top:0;
+}
+
+#precios ul {
+    width: 51%;
+    margin: 0;
 }
 
 #precios li {
-    font-size: 1.5rem;
-    line-height: 1.6;
+    font-size: 1.3rem;
+    line-height: 2.8;
     max-width: 600px;
+    white-space: nowrap;
+    list-style: none;
+}
+
+#precios li::before {
+    content: "✔";
+    font-weight: bold;
+}
+
+#precios img {
+    margin-top: 20%;
 }
 
 main #procesos {
