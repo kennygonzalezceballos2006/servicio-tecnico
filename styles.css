@@ -1,9 +1,19 @@
-html, body {
-    font-family: Arial, sans-serif;
-    background-color: #F6FAFD;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+    background-color: #F6FAFD;
     scroll-padding-top: 55px;
 }
 
@@ -111,7 +121,7 @@ main #precios {
     gap: 4%;
     min-height: 90vh;
     padding: 0;
-    padding-top:0;
+    padding-top: 0;
 }
 
 #precios ul {
@@ -138,7 +148,7 @@ main #precios {
 
 main #procesos {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     gap: 7%;
     min-height: 93vh;
     padding: 0;
@@ -150,7 +160,7 @@ main #procesos {
 }
 
 #procesos li {
-     font-size: 1.3rem;
+    font-size: 1.3rem;
     line-height: 2.5;
     max-width: 600px;
     list-style: none;
@@ -172,7 +182,7 @@ main #confianza {
     justify-content: flex-end;
     gap: 7%;
     min-height: 85vh;
-    padding:0;
+    padding: 0;
 }
 
 #confianza ul {
@@ -198,7 +208,7 @@ main #contacto {
     align-items: center;
     gap: 20px;
     min-height: 50vh;
-    padding:0;
+    padding: 0;
 }
 
 #contacto li {
@@ -231,470 +241,46 @@ footer {
     margin: 6px 0;
 }
 
-@media (max-width: 768px) {
-
-    nav ul {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 12px;
-        column-gap: 10px;
-        padding: 15px;
-        text-align: center;
-    }
-
-    nav a {
-        font-size: 0.9rem;
-    }
-}
-
-
 /* Tablets grandes y menores (1024px) */
 @media (max-width: 1024px) {
-    main section img {
-        max-width: 250px; /* reducir tamaño de imagen */
-    }
 
-    main section ul {
-        width: 55%; /* aumentar ancho de texto */
-    }
-
-    main section li {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        white-space: normal; /* quitar nowrap */
-    }
-
-    /* Separación entre nav y sección */
-    main {
-        margin-top: 20px;
-    }
-
-    /* Opcional: nav en dos filas */
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-}
-
-/* Móviles medianos (768px) */
-@media (max-width: 768px) {
-    main section img {
-        max-width: 180px;
-    }
-
-    main section ul {
-        width: 60%;
-    }
-
-    main section li {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-
-    main {
-        margin-top: 25px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-    }
-}
-
-/* Responsive ultra small: 400px x 800px */
-@media (max-width: 400px) {
-
-    /* Evitar scroll horizontal */
-    html, body {
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-    /* Sección "Quién soy" */
-    #quien-soy {
-        flex-direction: column;
-        padding: 20px 10px;
-        gap: 10px;
-        min-height: auto;
-        text-align: center;
-    }
-
-    #quien-soy h2 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
-
-    #quien-soy p {
-        font-size: 0.9rem;
-        line-height: 1.3;
-        max-width: 95%;
-        margin: 0 auto;
-    }
-
-    /* Main general */
-    main {
-        width: 100%;
-        padding: 10px 5px;
-        gap: 20px;
-    }
-
-    /* Secciones principales: servicios, precios, procesos, confianza */
-    main section {
-        display: flex;
-        flex-direction: column; /* imagen arriba, texto debajo */
-        align-items: center;
-        gap: 10px;
-        width: 100%;
-        padding: 5px;
-        box-sizing: border-box;
-        min-height: auto;
-    }
-
-    main section img {
-        max-width: 80%; /* que nunca se salga */
-        height: auto;
-        margin: 0 auto;
-        display: block;
-        border-radius: 5%;
-    }
-
-    main section ul {
-        width: 90%;
-        padding: 0;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    main section li {
-        font-size: 0.85rem;
-        line-height: 1.2;
-        white-space: normal;
-        overflow-wrap: break-word;
-        list-style: none;
-    }
-
-    main section li::before {
-        content: "✔ ";
-        font-weight: bold;
-    }
-
-    main section h2 {
-        font-size: 1.2rem;
-        margin-bottom: 5px;
-    }
-
-    /* Contacto */
+    #quien-soy,
+    #servicios,
+    #precios,
+    #procesos,
+    #confianza,
     #contacto {
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
         min-height: auto;
+        padding: 80px 0;
     }
 
-    #contacto li {
-        font-size: 0.9rem;
-        text-align: center;
-        width: 95%;
-        padding: 0;
-        margin: 2px 0;
-        white-space: normal;
-    }
-
-    #contacto i {
-        font-size: 1.3rem;
-        margin-right: 3px;
-    }
-
-    #contacto a {
-        font-size: 0.9rem;
-    }
-
-    /* Nav */
-    nav ul {
-        flex-direction: column;
-        gap: 3px;
-        padding: 5px;
-        margin: 0 auto;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav li {
-        width: 100%;
-        margin: 2px 0;
-    }
-
-    nav a {
-        font-size: 0.8rem;
-        display: block;
-        width: 100%;
-        padding: 5px 0;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    /* Footer */
-    footer {
-        flex-direction: column;
-        gap: 2px;
-        font-size: 0.7rem;
-        text-align: center;
-        padding: 5px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    footer p {
-        margin: 3px 0;
-    }
-}
-
-/* ------------------ TELÉFONOS GRANDES (≈ 400px - 768px) ------------------ */
-@media (max-width: 768px) {
-
-    html, body {
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-    /* Sección "Quién soy" */
-    #quien-soy {
-        flex-direction: column;
-        gap: 10px;
-        padding: 40px 15px;
-        min-height: auto;
-        text-align: center;
-    }
-
-    #quien-soy h2 {
-        font-size: 2.5rem;
-    }
-
-    #quien-soy p {
-        font-size: 1rem;
-        line-height: 1.4;
-        max-width: 90%;
-        margin: 0 auto;
-    }
-
-    /* Secciones principales: servicios, precios, procesos, confianza */
-    main section {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        width: 100%;
-        padding: 10px 5px;
-        min-height: auto;
-    }
-
-    main section img {
-        max-width: 70%;
-        height: auto;
-        margin: 0 auto;
-        display: block;
-        border-radius: 5%;
-    }
-
-    main section ul {
-        width: 50%;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    main section li {
-        font-size: 1rem;
-        line-height: 1.3;
-        white-space: nowrap;
-        overflow-wrap: break-word;
-    }
-
-    main section h2 {
-        font-size: 1.5rem;
-        margin-bottom: 5px;
-    }
-
-    /* Contacto */
-    #contacto {
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-        min-height: auto;
-    }
-
-    #contacto li {
-        font-size: 1rem;
-        text-align: center;
-        width: 95%;
-        padding: 0;
-        margin: 2px 0;
-        white-space: normal;
-    }
-
-    #contacto i {
-        font-size: 1.5rem;
-        margin-right: 4px;
-    }
-
-    #contacto a {
-        font-size: 1rem;
-    }
-
-    /* Nav */
     nav {
-        position: sticky;
-        top: 0;
-        z-index: 100;
+        position: fixed;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 5px;
-        padding: 5px;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav li {
-        width: 100%;
-        margin: 2px 0;
-    }
-
-    nav a {
-        font-size: 0.9rem;
-        padding: 6px 0;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: block;
-    }
-
-    /* Footer */
-    footer {
-        flex-direction: column;
-        gap: 3px;
-        font-size: 0.8rem;
-        text-align: center;
-        padding: 5px 10px;
-    }
-
-    footer p {
-        margin: 3px 0;
-    }
-}
-
-
-/* ------------------ TABLETS (≈ 769px - 1024px) ------------------ */
-@media (min-width: 769px) and (max-width: 1024px) {
-
-    html, body {
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-    /* Sección "Quién soy" */
-    #quien-soy {
-        flex-direction: row; /* imagen y texto lado a lado si hay imagen */
+    main #servicios {
+        display: flex;
         justify-content: center;
         align-items: center;
-        gap: 5%;
-        padding: 50px 20px;
-        min-height: auto;
-        text-align: left;
+        width: 100%;
+        border: 1px solid black;
     }
 
-    #quien-soy h2 {
-        font-size: 3rem;
-    }
-
-    #quien-soy p {
-        font-size: 1.2rem;
-        line-height: 1.5;
-        max-width: 550px;
-    }
-
-    /* Secciones principales: filas horizontales */
-    main section {
-        flex-direction: row; /* imagen izquierda/derecha, texto al lado */
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 5%;
-        padding: 10px 0;
-    }
-
-    main section img {
-        max-width: 250px;
-        height: auto;
-        display: block;
+    #servicios ul {
+        display: flex;
+        flex-direction: column;
+        justify-self: flex-start;
+        width: 40%;
         margin: 0;
-        border-radius: 5%;
+        border: 1px solid black;
     }
 
-    main section ul {
-        width: 50%;
-        margin: 0;
-        text-align: left;
+    #servicios img {
+        max-width: 450px;
     }
 
-    main section li {
-        font-size: 1.1rem;
-        line-height: 1.5;
-        white-space: normal;
-    }
-
-    main section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 5px;
-    }
-
-    /* Contacto */
-    #contacto {
-        flex-direction: row;
-        justify-content: center;
-        gap: 15px;
-        min-height: auto;
-    }
-
-    #contacto li {
+    #servicios li {
         font-size: 1.2rem;
-        white-space: normal;
-        text-align: center;
-        width: auto;
-    }
-
-    #contacto i {
-        font-size: 1.8rem;
-        margin-right: 5px;
-    }
-
-    #contacto a {
-        font-size: 1.1rem;
-    }
-
-    /* Nav */
-    nav ul {
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        padding: 10px 0;
-    }
-
-    nav li {
-        margin: 3px 5px;
-    }
-
-    nav a {
-        font-size: 1rem;
-        padding: 6px 10px;
-    }
-
-    /* Footer */
-    footer {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 5px;
-        font-size: 0.85rem;
-        text-align: center;
-        padding: 10px 15px;
+        line-height: 2.2;
     }
 }
