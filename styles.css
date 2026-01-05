@@ -4,10 +4,11 @@
     box-sizing: border-box;
 }
 
-html,body {
+html,
+body {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    max-width: 100%; 
+    max-width: 100%;
     padding: 0;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -85,6 +86,7 @@ main {
 main #servicios {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     min-height: 93vh;
     padding: 0;
     padding-top: 0;
@@ -118,7 +120,8 @@ main #servicios {
 
 main #precios {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
     gap: 4%;
     min-height: 90vh;
     padding: 0;
@@ -244,13 +247,81 @@ footer {
 
 /* Tablets grandes y menores (1024px) */
 @media (max-width: 1024px) {
-    #quien-soy,
+
+    #quien-soy {
+        gap: 0;
+        padding: 30px;
+    }
+
+    #quien-soy h2 {
+        font-size: 5.5rem;
+        width: 50%;
+    }
+
+    #quien-soy p {
+        width: 50%;
+
+    }
+
     #servicios,
     #precios,
     #procesos,
     #confianza,
     #contacto {
-        min-height: auto;
-        padding: 80px 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #servicios img,
+    #procesos img {
+        max-width: 400px;
+    }
+
+    #precios img {
+        max-width: 300px;
+    }
+
+    #confianza img {
+        max-width: 350px;
+    }
+
+    #servicios ul,
+    #procesos ul {
+        width: 50%;
+        padding: 0;
+    }
+
+    #precios ul {
+        width: 70%;
+        padding: 0;
+    }
+
+    #confianza ul {
+        width: 80%;
+        padding: 0;
+    }
+
+    #servicios li,
+    #precios li,
+    #procesos li {
+        font-size: 1.2rem;
+        line-height: 2.8;
+    }
+
+    #precios li {
+        font-size: 1.1rem;
+        line-height: 2.8;
+    }
+
+    #procesos li {
+        font-size: 1.2rem;
+        line-height: 2.3;
+    }
+
+    #confianza li {
+        font-size: 1.2rem;
+        line-height: 3;
     }
 }
