@@ -460,24 +460,27 @@ footer {
     }
 
     /* ===== LISTAS ===== */
-    #servicios ul,
     #precios ul,
     #procesos ul,
     #confianza ul {
         width: 100%;
-        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10px;
     }
+
 
     #servicios li,
     #procesos li,
     #confianza li {
-        font-size: 1rem;
+        font-size: 0.9rem;
         line-height: 1.9;
         white-space: normal;
     }
 
     #precios li {
-        font-size: 0.8rem;
+        font-size: 0.76rem;
     }
 
     /* ===== IMÁGENES ===== */
@@ -490,8 +493,18 @@ footer {
     }
 
     /* ===== CONTACTO ===== */
-    #contacto ul {
+
+
+    #contacto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
+    }
+
+    #contacto ul {
+        width: 100%;
+        padding: 10px;
     }
 
     #contacto li {
@@ -501,9 +514,10 @@ footer {
 
     /* ===== FOOTER ===== */
     footer {
+        display: flex;
         flex-direction: column;
+        justify-content: center;
         text-align: center;
         gap: 6px;
-        padding: 15px;
     }
 }
