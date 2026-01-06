@@ -220,6 +220,7 @@ main #contacto {
     line-height: 1.6;
     max-width: 600px;
     white-space: nowrap;
+    list-style: none;
 }
 
 #contacto i {
@@ -323,5 +324,186 @@ footer {
     #confianza li {
         font-size: 1.2rem;
         line-height: 3;
+    }
+}
+
+/* Tablets pequeñas y móviles grandes (768px) */
+@media (max-width: 768px) {
+
+    /* QUIÉN SOY */
+    #quien-soy {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        min-height: 90vh;
+    }
+
+    #quien-soy h2 {
+        width: 100%;
+        font-size: 3.2rem;
+        margin-bottom: 15px;
+    }
+
+    #quien-soy p {
+        width: 100%;
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    /* SECCIONES GENERALES */
+    #servicios,
+    #precios,
+    #procesos,
+    #confianza,
+    #contacto {
+        flex-direction: column;
+        min-height: auto;
+        padding: 40px 20px;
+        gap: 25px;
+    }
+
+    /* IMÁGENES */
+    #servicios img,
+    #procesos img,
+    #confianza img,
+    #precios img {
+        max-width: 360px;
+        width: 100%;
+    }
+
+    /* LISTAS */
+    #servicios ul,
+    #procesos ul,
+    #precios ul,
+    #confianza ul {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* TEXTOS */
+    #servicios li,
+    #precios li,
+    #procesos li,
+    #confianza li {
+        font-size: 1.05rem;
+        line-height: 2.2;
+    }
+
+    #precios p,
+    #procesos p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}
+
+/* Móviles (480px y menores) */
+@media (max-width: 480px) {
+    body {
+        scroll-padding-top: 600px; /* altura real del nav móvil */
+    }
+
+    nav {
+        height: auto;
+        padding: 0;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin: 0;
+    }
+
+    nav li {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+    /* ===== QUIÉN SOY ===== */
+    #quien-soy {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 15px;
+        gap: 20px;
+    }
+
+    #quien-soy h2 {
+        font-size: 2.8rem;
+        width: 100%;
+    }
+
+    #quien-soy p {
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    /* ===== SECCIONES GENERALES ===== */
+    #servicios,
+    #precios,
+    #procesos,
+    #confianza,
+    #contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    /* ===== LISTAS ===== */
+    #servicios ul,
+    #precios ul,
+    #procesos ul,
+    #confianza ul {
+        width: 100%;
+        padding: 0;
+    }
+
+    #servicios li,
+    #procesos li,
+    #confianza li {
+        font-size: 1rem;
+        line-height: 1.9;
+        white-space: normal;
+    }
+
+    #precios li {
+        font-size: 0.8rem;
+    }
+
+    /* ===== IMÁGENES ===== */
+    #servicios img,
+    #precios img,
+    #procesos img,
+    #confianza img {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    /* ===== CONTACTO ===== */
+    #contacto ul {
+        text-align: center;
+    }
+
+    #contacto li {
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 6px;
+        padding: 15px;
     }
 }
