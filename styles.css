@@ -58,11 +58,12 @@ nav li.active a {
 
 #quien-soy {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 10%;
     min-height: 80vh;
     padding: 60px 20px;
+    padding-top: 15%;
     margin-bottom: 5%;
 }
 
@@ -75,7 +76,6 @@ nav li.active a {
 #quien-soy .destacado {
     color: white;
 }
-
 
 #quien-soy p {
     font-size: 1.5rem;
