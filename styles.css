@@ -12,12 +12,12 @@ body {
     padding: 0;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #F6FAFD;
+    background-color: #1B1B25;
     scroll-padding-top: 55px;
 }
 
 nav {
-    background-color: #0A1931;
+    background-color: #1B1B25;
     position: fixed;
     top: 0;
     z-index: 999;
@@ -35,20 +35,25 @@ nav ul {
     padding: 10px 0
 }
 
-nav li {
+nav li a {
     margin: 0;
-}
-
-nav a {
+    padding: 8px 25px;
+    transition: all 0.25s ease;
+    display: inline-block;
     text-decoration: none;
     color: white;
     font-weight: 500;
-    transition: 0.3s ease;
+    transition: background-color 0.25s ease;
+    border-radius: 10px;
 }
 
-nav a:hover {
-    display: inline-block;
-    transform: scale(1.2);
+nav li:hover a {
+    background-color: #756BFF;
+}
+
+
+nav li.active a {
+    background-color: #756BFF;
 }
 
 #quien-soy {
@@ -64,12 +69,18 @@ nav a:hover {
 #quien-soy h2 {
     font-size: 5rem;
     margin-bottom: 20px;
+    color: #756BFF;
+}
+
+#quien-soy strong {
+    color: #756BFF;
 }
 
 #quien-soy p {
     font-size: 1.5rem;
     line-height: 1.6;
     max-width: 600px;
+    color: white;
 }
 
 main {
@@ -109,6 +120,7 @@ main #servicios {
 
 #servicios li::before {
     content: "✔";
+    color: #756BFF;
     font-weight: bold;
 }
 
@@ -144,6 +156,7 @@ main #precios {
 #precios li::before {
     content: "✔";
     font-weight: bold;
+    color: #756BFF;
 }
 
 #precios img {
@@ -173,6 +186,7 @@ main #procesos {
 #procesos li::before {
     content: "✔";
     font-weight: bold;
+    color: #756BFF;
 }
 
 #procesos img {
@@ -204,6 +218,7 @@ main #confianza {
 #confianza li::before {
     content: "✔";
     font-weight: bold;
+    color: #756BFF;
 }
 
 main #contacto {
@@ -211,7 +226,7 @@ main #contacto {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    min-height: 50vh;
+    min-height: 90vh;
     padding: 0;
 }
 
@@ -245,6 +260,28 @@ footer {
 #footer p {
     margin: 6px 0;
 }
+
+#servicios h2,
+#precios h2,
+#procesos h2,
+#confianza h2,
+#contacto h2 {
+    color: white;
+}
+
+#servicios li,
+#precios li,
+#procesos li,
+#confianza li,
+#contacto li {
+    color: white;
+}
+
+#precios em,
+#procesos em {
+    color: white;
+}
+
 
 /* Tablets grandes y menores (1024px) */
 @media (max-width: 1024px) {
@@ -402,7 +439,8 @@ footer {
 /* Móviles (480px y menores) */
 @media (max-width: 480px) {
     body {
-        scroll-padding-top: 600px; /* altura real del nav móvil */
+        scroll-padding-top: 600px;
+        /* altura real del nav móvil */
     }
 
     nav {
@@ -428,6 +466,7 @@ footer {
         font-size: 0.8rem;
         white-space: nowrap;
     }
+
     /* ===== QUIÉN SOY ===== */
     #quien-soy {
         flex-direction: column;
