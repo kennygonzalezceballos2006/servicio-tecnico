@@ -297,18 +297,21 @@ footer {
 @media (max-width: 1024px) {
 
     #quien-soy {
-        gap: 0;
-        padding: 30px;
+        min-height: auto;
+        display: flex;
+        align-items: center;
     }
 
     #quien-soy h2 {
-        font-size: 5.5rem;
-        width: 50%;
+        font-size: clamp(3rem, 6vw, 5.5rem);
+        width: 100%;
+        text-align: center;
     }
 
     #quien-soy p {
-        width: 50%;
-
+        width: 100%;
+        line-height: 1.8;
+        max-width: 650px;
     }
 
     #servicios,
@@ -371,6 +374,27 @@ footer {
     #confianza li {
         font-size: 1.2rem;
         line-height: 3;
+    }
+
+    #contacto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #contacto ul {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contacto li {
+        font-size: 1.5rem;
+        white-space: nowrap;
+        width: 100%;
     }
 }
 
