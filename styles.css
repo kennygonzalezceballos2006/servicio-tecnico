@@ -17,7 +17,10 @@ body {
 }
 
 nav {
-    background-color: #1B1B25;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(14px) saturate(120%) brightness(0.9);
+    -webkit-backdrop-filter: blur(14px) saturate(120%) brightness(0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     position: fixed;
     top: 0;
     z-index: 999;
